@@ -1,6 +1,6 @@
 {
     "name": "staticapis",
-    "version": "1.0.5",
+    "version": "1.0.7",
     "description": "前端静态服务加api接口",
     "main": "index.js",
     "scripts": {
@@ -16,6 +16,6 @@
     "license": "ISC",
     "repository": {
         "type": "git",
-        "url": "https://github.com/chenyuanguang/blend-cli"
+        "url": "https://github.com/chenyuanguang/staticapis"
     }
 }

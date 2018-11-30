@@ -1,4 +1,4 @@
-# blend-cli 
+# staticapis 
 > 版本 `@staticapis` 1.0.5.
 
 ## 介绍：

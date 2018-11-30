@@ -21,50 +21,63 @@ program
     .action(() => {
         console.log("创建一个具备服务和接口的项目")
     })
-
+    .version('1.0.7')
 
 program.on('--help', () => {
 
     let useConfig = `
     
-      author：陈元广
+    # staticapis 
+   
     
-      使用说明：
+    ## 介绍：
     
-        #查看node版本：
+    >可以实现服务的启动；
+    >
+    >可以实现接口的开放；
     
-          "必须保证node在7.3以上版本"
+    ## 作者：
     
-        #
+    >陈元广
     
-        >默认使用的是commonjs进行模块开发，默认对js文件都做了common规范处理；
-        >
-        >如果使用requirejs或者不使用模块化，可以把jsModule设置为false；
-        
-        #
-        
-        >默认是css文件和sass文件全部都支持开发时可以单独使用一种；
     
-        
-        #创建项目：
+    ## 查看node版本：
     
-           mbcli init [project-name]
+        "必须保证node在7.3以上版本"
     
-           cd  [project-name]
+    ## 创建项目：
     
-           npm install & cnpm install
+        staticapis [project-name]
+
+        cd [project-name]
+
+        npm start
     
-           npm start
+    example：
     
-        #example:
+        staticapis projectTest
+
+        cd projectTest
+
+        npm start
+
     
-           mbcli init mbTest
     
-           cd mbTest
+    # 项目结构
     
-           npm install & cnpm install
-    
-           npm start
+            |--bin                  //项目启动相关文件
+            |--mock                 //模拟接口
+            |  |--data              //使用json文件进行数据存储
+            |     |--students.json  
+            |  |--index.js          //配置接口地址
+            |--src                  //静态文件服务
+            |  |--page
+            |     |--article.html
+            |  |--css
+            |     |--article.css
+            |  |--js
+            |     |--article.js
+            |--package.json         //项目配置文件
     
     `
     console.log(useConfig)
