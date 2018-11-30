@@ -1,0 +1,72 @@
+#!/usr/bin/env node
+
+const fs = require("fs")
+const Copy = require("../libs/copy")
+const path = require("path")
+
+//实现文件的拷贝
+function resolve(dir) {
+    return path.resolve(process.argv[1], "../../", dir)
+}
+
+let buildSrc = path.join(process.cwd(), "./", process.argv[process.argv.length - 1])
+
+Copy(resolve("template"), buildSrc)
+
+//帮助命令的使用
+var program = require('commander');
+program
+    .usage('<command> [options]')
+    .description("服务接口自动化构建工具")
+    .action(() => {
+        console.log("创建一个具备服务和接口的项目")
+    })
+
+
+program.on('--help', () => {
+
+    let useConfig = `
+    
+      author：陈元广
+    
+      使用说明：
+    
+        #查看node版本：
+    
+          "必须保证node在7.3以上版本"
+    
+        #
+    
+        >默认使用的是commonjs进行模块开发，默认对js文件都做了common规范处理；
+        >
+        >如果使用requirejs或者不使用模块化，可以把jsModule设置为false；
+        
+        #
+        
+        >默认是css文件和sass文件全部都支持开发时可以单独使用一种；
+    
+        
+        #创建项目：
+    
+           mbcli init [project-name]
+    
+           cd  [project-name]
+    
+           npm install & cnpm install
+    
+           npm start
+    
+        #example:
+    
+           mbcli init mbTest
+    
+           cd mbTest
+    
+           npm install & cnpm install
+    
+           npm start
+    
+    `
+    console.log(useConfig)
+})
+program.parse(process.argv);

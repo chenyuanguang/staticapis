@@ -1,0 +1,21 @@
+{
+    "name": "staticapis",
+    "version": "1.0.5",
+    "description": "前端静态服务加api接口",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "bin": {
+        "staticapis": "bin/staticapis"
+    },
+    "dependencies": {
+        "commander": "^2.9.0"
+    },
+    "author": "",
+    "license": "ISC",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/chenyuanguang/blend-cli"
+    }
+}
