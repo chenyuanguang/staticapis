@@ -12,34 +12,34 @@
 >陈元广
 
 
-##查看node版本：
+## 查看node版本：
 
     "必须保证node在7.3以上版本"
 
-##下载安装
+## 下载安装
 
 检查是否安装过staticapis
 
 ```bash
     staticapis -V
 ```
-###初次安装
+### 初次安装
 
 ```bash
     npm install -g staticapis
 ```
 
-###版本更新
+### 版本更新
 
-####命令方式
+#### 命令方式
 
 ```bash
     npm update -g staticapis
 ```
 
-####笨拙有效的方式（windows权限问题很恶心）
+#### 笨拙有效的方式（windows权限问题很恶心）
 
-#####windows
+##### windows
 
 >1、先找到全局npm和npm-cache(一般都在C:\Users\用户名\AppData\Roaming)
 >
@@ -57,7 +57,7 @@
 ```bash
     npm install -g staticapis
 ```
-#####mac
+##### mac
 
 >1、先找到命令所在的文件夹(一般都在/usr/local/bin/)
 >
@@ -75,7 +75,7 @@
 ```
 
 
-##创建项目：
+## 创建项目：
 
 ```bash
     staticapis [project-name]
@@ -90,9 +90,9 @@ example：
     npm start
 ```
 
-##注：
+## 注：
 
-#项目结构
+# 项目结构
 
 |--bin                  //项目启动相关文件
 |--mock                 //模拟接口
